@@ -1,0 +1,12 @@
+<ul>
+{{#each filteredItems as |fi|}}
+    <li>{{fi.name}} {{fi.selected}}
+        {{#if watcher}}
+            {{fi.combined}}
+        {{/if}}
+    </li>
+{{/each}}
+</ul>
+
+<button {{action 'toggle'}}>Toggle selected</button>
+<button {{action 'toggleWatcher'}}>Toggle watcher</button>
